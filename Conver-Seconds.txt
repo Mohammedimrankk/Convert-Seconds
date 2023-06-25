@@ -1,0 +1,14 @@
+#include<stdio.h>
+int convert(int n,int h,int m,int s);
+int main(){
+    int n,h,m,s;
+    printf("Enter the value for n(integer value) in seconds = ");
+    scanf("%d",&n);
+    convert(n,h,m,s);
+}
+int convert(int n,int h,int m,int s){
+    h=n/(3600);
+    m=(n-(h*3600))/60;
+    s=n-(h*3600)-(m*60);
+    printf("Hour's:Minute's:Second's = %d:%d:%d",h,m,s);
+}
